@@ -1,0 +1,5 @@
+# LuaGuard Backend
+node_modules/
+luaguard.db
+.env
+*.log

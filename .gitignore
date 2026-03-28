@@ -1,0 +1,10 @@
+node_modules
+.next
+.vercel
+luaguard.db
+luaguard.db-journal
+.env.local
+dashboard/node_modules
+dashboard/.next
+*.log
+.DS_Store
