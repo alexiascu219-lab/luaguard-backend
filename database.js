@@ -54,8 +54,10 @@ db.serialize(() => {
         timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY(key_id) REFERENCES keys(id) ON DELETE CASCADE
     )`);
+    // Seed master invite if not exists
+    db.run("INSERT OR IGNORE INTO invites (invite_code) VALUES ('LGINV-MASTER')");
     
-    console.log("SQLite Database initialized.");
+    console.log("SQLite Database initialized with seeds.");
 });
 
 module.exports = {
